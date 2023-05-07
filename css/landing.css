@@ -1,0 +1,17 @@
+.container-fluid{
+    height: 50px;
+}
+
+#masthead{
+    height: 750px;
+    background-color: blueviolet;
+}
+.a{
+    height: 750px;
+    background-color: red;
+}
+
+.b{
+    height: 750px;
+    background-color: orange;
+}

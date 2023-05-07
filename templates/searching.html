@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/project.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div id="nav-header">
+            <a href="main.html" id="logo-img">로고</a>
+
+            <form id="search-form" action="searching.html" method="GET">
+                <div class="searching">
+                    <input name="q" type="text" placeholder="뉴스 키워드 검색" id="searching-bar" class="searching-bar2">
+                    <a href="searching.html"><img
+                            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"
+                            id="searching-icon2"></a>
+                </div>
+            </form>
+
+            <a href="#" id="user">ooo님</a>
+        </div>
+    </header>
+
+    <!-- main -->
+    <div class="news">
+        <p>검색결과 약 4,720,000개</p>
+        <div class="article_list">
+            <a href="">
+                <div class="article">뉴스1</div>
+            </a>
+            <div class="article">뉴스2</div>
+            <div class="article">뉴스3</div>
+
+            <p id="pagination"> &lt; 1/20 &gt;</p>
+        </div>
+    </div>
+
+    <!-- article_modal -->
+    <div id="modal" class="modal-overlay">
+        <div class="modal-window">
+            <div class="title">
+                <h1>뉴스기사 제목</h1>
+            </div>
+            <div class="close-area">X</div>
+
+            <div class="article-middle">
+                <div class="content-summary">
+                    <p>요약문</p>
+                </div>
+                <div class="content-info">
+                    <p>기사정보</p>
+                </div>
+            </div>
+
+            <div class="content-body">
+                <p>기사본문</p>
+            </div>
+
+            <div class="keyword-group">
+                <div class="keyword">키워드1</div>
+                <div class="keyword">키워드2</div>
+                <div class="keyword">키워드3</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div id="footer">
+            <p>footer상자</p>
+        </div>
+    </footer>
+
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>
