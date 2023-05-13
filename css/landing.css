@@ -1,17 +1,88 @@
-.container-fluid{
-    height: 50px;
+body {
+    margin: 0;
 }
 
-#masthead{
-    height: 750px;
-    background-color: blueviolet;
-}
-.a{
-    height: 750px;
-    background-color: red;
+/* navbar */
+#nav-header {
+    width: 100%;
+    height: 100px;
+    background-color: #1e1e1e;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
 }
 
-.b{
-    height: 750px;
-    background-color: orange;
+#logo-img {
+    width: 130px;
+    display: flex;
+    margin-left: 70px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
+
+#navbar {
+    width:800px;
+    margin-left:auto;
+    margin-right:70px;
+    display: flex;
+    justify-content: end;
+}
+
+ul {
+    display:flex;
+    list-style: none;
+ }
+.nav-item, .nav-item2{
+    font-size: 25px;
+    color: white;
+    margin-left: 40px;
+    text-decoration: none;
+}
+/* main */
+#main{
+    margin-top:100px;
+    width: 100%;
+    height:fit-content;
+}
+/* masthead */
+#masthead {
+    height: 750px;
+    padding-top: 10px;
+    background-color: #d2d2d2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:80px;
+}
+
+/* 팀원소개 */
+#team {
+    height: 750px;
+    margin-top: -16px;
+    padding-top: 10px;
+    font-size:80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 프로젝트 */
+#project {
+    height: 750px;
+    margin-top: -16px;
+    background-color: #d2d2d2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:80px;
+}
+
+/* footer */
+#footer {
+    width: 60%;
+    height: 100px;
+    margin: 0 auto;
+    border-top: 1px solid #bbb;
+  }
