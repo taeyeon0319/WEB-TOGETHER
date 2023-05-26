@@ -1,55 +1,46 @@
-// 검색창에 검색키워드 출력
-const params = new URLSearchParams(window.location.search);
-const query = params.get('q');
-const searchingBar = document.getElementById('searching-bar');
+window.addEventListener('DOMContentLoaded', (event) => {
+    const navLinks = document.querySelectorAll('a.nav-item');
+    const logoImg = document.querySelector('#logo-img');
 
-if (query != null) {
-    searchingBar.placeholder = query;
-}
+    // 스크롤 이벤트 처리 함수
+    function scrollToSection(event) {
+        event.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
 
-// 돋보기 아이콘도 검색 가능
-const form = document.querySelector('#search-form');
-const icon1 = document.querySelector('#searching-icon');
-const icon2 = document.querySelector('#searching-icon2');
+        // 스크롤 이동
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
 
-if (icon1 != null) {
-    icon1.addEventListener('click', (event) => {
-        event.preventDefault(); // 기본 동작 방지
-        form.submit(); // 폼 전송
+    // 네비게이션 링크 클릭 이벤트 처리
+    navLinks.forEach((link) => {
+        link.addEventListener('click', scrollToSection);
     });
-}
 
-if (icon2 != null) {
-    icon2.addEventListener('click', (event) => {
-        event.preventDefault(); // 기본 동작 방지
-        form.submit(); // 폼 전송
+    // 로고 이미지 클릭 이벤트 처리
+    logoImg.addEventListener('click', (event) => {
+        event.preventDefault();
+        const targetSection = document.querySelector('#masthead');
+
+        // 스크롤 이동
+        targetSection.scrollIntoView({ behavior: 'smooth' });
     });
-}
 
-// 뉴스 기사 modal창 
-const modal = document.querySelector('#modal');
-const article = document.querySelector('.article');
-const closeButton = document.querySelector('.close-area');
+    // 팀원 섹션에서 로고 클릭 시 초기 페이지로 스크롤 이동
+    const teamSection = document.querySelector('#team');
+    teamSection.addEventListener('click', scrollToSection);
 
-article.addEventListener('click', function(e) {
-  e.preventDefault();
-  modal.style.display = 'block';
-});
-
-closeButton.addEventListener('click', function() {
-  modal.style.display = 'none';
-});
-
-// 모달 외부를 클릭하면 모달 닫기
-modal.addEventListener('click', function(e) {
-  if (e.target === modal) {
-    modal.style.display = 'none';
-  }
-});
-
-// ESC 키를 누르면 모달 닫기
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    modal.style.display = 'none';
-  }
+    // 페이지 완전히 로드 후 스크롤 이벤트 처리
+    window.addEventListener('load', (event) => {
+        const hash = window.location.hash;
+        if (hash && hash !== '#masthead') {
+            const targetSection = document.querySelector(hash);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            const targetSection = document.querySelector('#masthead');
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
 });

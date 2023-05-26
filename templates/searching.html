@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/landing.css">
     <link rel="stylesheet" href="../css/project.css">
 </head>
 
@@ -17,26 +18,38 @@
 
             <form id="search-form" action="searching.html" method="GET">
                 <div class="searching">
-                    <input name="q" type="text" placeholder="뉴스 키워드 검색" id="searching-bar" class="searching-bar2">
+                    <input name="q" type="text" placeholder="뉴스 키워드 검색" id="searching-bar2">
                     <a href="searching.html"><img
                             src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"
                             id="searching-icon2"></a>
                 </div>
             </form>
 
-            <a href="mypage.html" id="user">ooo님</a>
+            <a href="mypage.html" id="user">MYPAGE</a>
         </div>
     </header>
 
     <!-- main -->
     <div class="news">
-        <p>검색결과 약 4,720,000개</p>
+        <p id="article_count">검색결과 약 4,720,000개</p>
         <div class="article_list">
-            <a href="">
-                <div class="article">뉴스1</div>
+            <a href="" class="article">
+                <p class="ar_title">동국대 와이즈캠퍼스 조경·정원디자인학부 동문 발전기부...</p>
+                <p class="ar_press">연합뉴스</p>
+                <p class="ar_date">2023-05-26</p>
             </a>
-            <div class="article">뉴스2</div>
-            <div class="article">뉴스3</div>
+
+            <a href="" class="article">
+                <p class="ar_title">제목</p>
+                <p class="ar_press">언론사</p>
+                <p class="ar_date">작성날짜</p>
+            </a>
+
+            <a href="" class="article">
+                <p class="ar_title">제목</p>
+                <p class="ar_press">언론사</p>
+                <p class="ar_date">작성날짜</p>
+            </a>
 
             <p id="pagination"> &lt; 1/20 &gt;</p>
         </div>
@@ -55,7 +68,9 @@
                     <p>요약문</p>
                 </div>
                 <div class="content-info">
-                    <p>기사정보</p>
+                    <p>언론사 : </p>
+                    <p>작성날짜 : </p>
+                    <p>기자 : </p>
                 </div>
             </div>
 
@@ -78,7 +93,7 @@
         </div>
     </footer>
 
-    <script src="../js/scripts.js"></script>
+    <script src="../js/scripts3.js"></script>
 </body>
 
 </html>

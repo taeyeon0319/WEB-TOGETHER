@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    background-color: #1e1e1e;
 }
 
 /* navbar */
@@ -59,7 +58,6 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     font-size: 80px;
 }
 
@@ -72,24 +70,26 @@ ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
+    background-color: #1e1e1e;
 }
 
 .member {
-    width: 25%;
-    height: 600px;
+    width: 60%;
+    height: 200px;
     background-color: black;
     border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    margin: 0 15px;
+    margin-top: -10px;
+    /* 간격을 조절할 값 */
 }
 
 
 .member_img {
-    width: 250px;
-    height: 250px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     margin-left: 20px;
     margin-right: 20px;
@@ -97,30 +97,25 @@ ul {
 }
 
 .member_info {
-    width: 80%;
-    height: 280px;
+    width: 70%;
+    height: 200px;
     color: white;
     font-size: 17px;
+    padding-left: 30px;
+    line-height: 10px;
+}
+
+#second_member {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    line-height: 0px;
-    /* background-color: red; */
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .name {
     font-weight: bolder;
     font-size: 30px;
     color: white;
-    margin-top: 0px;
-}
-
-.name-underline {
-    width:200px;
-    /* border: none; */
-    border-top: 1px solid #ccc;
-    margin-top: -60px;
 }
 
 .birth {
@@ -129,36 +124,42 @@ ul {
     margin-left: 10px;
 }
 
-.major {
-    margin-top: -40px;
-}
-
 .github {
     text-decoration: none;
     color: #FFFFFF80;
 }
 
 .member_keyword {
-    width: 90%;
+    width: 100%;
     /* background-color: #bbb; */
     height: 50px;
     margin-top: 17px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.key {
-    width: 85px;
-    height: 40px;
+.key, .key2 {
+    width: 100px;
+    height: 45px;
     border-radius: 15px;
     background-color: #333333;
     color: white;
-    font-size: 16px;
-    font-weight: bolder;
+    font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.key{
+    margin-right: 10px;
+}
+
+.key2{
+    margin-left:10px;
+}
+
+#member_keyword2 {
+    justify-content: flex-end;
 }
 
 /* 프로젝트 */

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/landing.css">
     <link rel="stylesheet" href="../css/project.css">
 </head>
 
@@ -14,21 +15,68 @@
     <header>
         <div id="nav-header">
             <a href="main.html"><img src="../img/logo.jpg" alt="WEB-TOGETHER" id="logo-img"></a>
-            <a href="mypage.html" id="user">ooo님</a>
+            <a href="mypage.html" id="user">MYPAGE</a>
         </div>
     </header>
 
     <!-- Main -->
     <div id="mypage-main">
         <h1 id="mypage-title">MYPAGE</h1>
-        <div id="scrap-list">
-            <a href="">
-                <div class="scrap-article">뉴스1</div>
-            </a>
-            <div class="scrap-article">뉴스2</div>
-            <div class="scrap-article">뉴스3</div>
-            <div class="scrap-article">뉴스4</div>
+        <div class="news" style="margin-top:-10px">
+            <div class="article_list">
+                <a href="" class="article">
+                    <p class="ar_title">동국대 와이즈캠퍼스 조경·정원디자인학부 동문 발전기부...</p>
+                    <p class="ar_press">연합뉴스</p>
+                    <p class="ar_date">2023-05-26</p>
+                </a>
+    
+                <a href="" class="article">
+                    <p class="ar_title">제목</p>
+                    <p class="ar_press">언론사</p>
+                    <p class="ar_date">작성날짜</p>
+                </a>
+    
+                <a href="" class="article">
+                    <p class="ar_title">제목</p>
+                    <p class="ar_press">언론사</p>
+                    <p class="ar_date">작성날짜</p>
+                </a>
+    
+                <p id="pagination"> &lt; 1/20 &gt;</p>
+            </div>
         </div>
+    
+        <!-- article_modal -->
+        <div id="modal" class="modal-overlay">
+            <div class="modal-window">
+                <div class="title">
+                    <h1>뉴스기사 제목</h1>
+                </div>
+                <div class="close-area">X</div>
+    
+                <div class="article-middle">
+                    <div class="content-summary">
+                        <p>요약문</p>
+                    </div>
+                    <div class="content-info">
+                        <p>언론사 : </p>
+                        <p>작성날짜 : </p>
+                        <p>기자 : </p>
+                    </div>
+                </div>
+    
+                <div class="content-body">
+                    <p>기사본문</p>
+                </div>
+    
+                <div class="keyword-group">
+                    <div class="keyword">키워드1</div>
+                    <div class="keyword">키워드2</div>
+                    <div class="keyword">키워드3</div>
+                </div>
+            </div>
+        </div>
+    
     </div>
 
     <!-- Footer -->
@@ -38,7 +86,7 @@
         </div>
     </footer>
 
-    <script src="../js/scripts.js"></script>
+    <script src="../js/scripts3.js"></script>
 </body>
 
 </html>
