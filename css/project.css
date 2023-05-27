@@ -97,7 +97,7 @@
 
 .article_list {
   width: 100%;
-  height: 700px;
+  height: 900px;
   /* background: #D2D2D2; */
   padding-top: 1px;
   margin:0 auto;
@@ -109,12 +109,15 @@
   border-radius: 10px;
   background-color: #242424;
   margin: 10px auto;
-
   display: flex;
   align-items: center;
 
   text-decoration: none;
   font-size:18px;
+}
+
+.article:hover{
+  cursor:pointer;
 }
 
 .ar_title{
@@ -123,6 +126,9 @@
   font-weight: bolder;
   color:white;
   font-size:23px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .ar_press{
@@ -136,10 +142,17 @@
   padding:20px;
   color:gray;
 }
-#pagination {
-  width: max-content;
-  margin: 0 auto;
-  margin-top: 380px;
+
+#page{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  font-size: 20px;
+}
+
+#page div:hover{
+  cursor: pointer;
 }
 
 /* article modal */
@@ -159,11 +172,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: white;
   padding: 20px;
   overflow: auto;
   width: 1200px;
-  height: 650px;
+  height: 660px;
 }
 
 .close-area {
@@ -175,15 +188,12 @@
   font-weight: bolder;
 }
 
-.content {
-  padding: 10px;
-}
-
 .title {
   width: 100%;
   height: 50px;
-  background-color: #D2D2D2;
+  /* background-color: #D2D2D2; */
   margin-bottom: 10px;
+  margin-top:-5px;
 }
 
 .article-middle {
@@ -196,36 +206,39 @@
 .content-summary {
   width: 70%;
   height: 100%;
-  background-color: #D2D2D2;
+  background-color: #D2D2D280;
   margin-right: 1%;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
 }
 
 .content-info {
   width: 34%;
   height: 100%;
-  background-color: #D2D2D2;
+  background-color: #D2D2D280;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
 }
 
 .content-body {
   width: 100%;
   height: 40%;
-  background-color: #D2D2D2;
+  background-color: #D2D2D280;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 .keyword-group {
   width: 100%;
   height: 9%;
-  background-color: #D2D2D2;
+  /* background-color: #D2D2D2; */
   display: flex;
   justify-content: start;
   align-items: center;
@@ -234,7 +247,7 @@
 .keyword {
   width: 10%;
   height: 45px;
-  background-color: white;
+  background-color: #D2D2D2;
   border-radius: 20px;
   margin-left: 10px;
   display: flex;
